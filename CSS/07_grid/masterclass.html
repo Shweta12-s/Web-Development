@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Masterclass</title>
+    <style>
+      .container {
+        margin-bottom: 10px;
+        padding: 20px;
+
+        background-color: rgb(201, 190, 190);
+      }
+      .box {
+        border: 2px solid grey;
+
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        color: aliceblue;
+      }
+      .grid-container {
+        gap: 2px;
+        display: grid;
+        margin-bottom: 10px;
+      }
+      /* .pastel-1 {
+        background-color: rgb(174, 65, 65);
+      }
+      .pastel-2 {
+        background-color: rgb(81, 81, 163);
+      }
+      .pastel-3 {
+        background-color: rgb(160, 61, 61);
+      }
+      .pastel-4 {
+        background-color: rgb(88, 88, 166);
+      }
+      .pastel-5 {
+        background-color: rgb(190, 65, 65);
+      }
+      .pastel-6 {
+        background-color: rgb(89, 89, 175);
+      } */
+      .box:nth-child(even) {
+        background-color: blueviolet;
+      }
+      .box:nth-child(odd) {
+        background-color: brown;
+      }
+      .grid-container-outer {
+        width: 200px;
+      }
+      .grid-container-inner {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Masterclass Demo</h1>
+    <div class="container">
+      <h2>Basic Grid!!</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 100px);
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Type</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
+        "
+      >
+        <div class="box" style="grid-area: header">Header</div>
+        <div class="box" style="grid-area: sidebar">Sidebar</div>
+        <div class="box" style="grid-area: main">Main</div>
+        <div class="box" style="grid-area: footer">Footer</div>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Minmax</h3>
+      <div
+        class="grid-container"
+        style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))"
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Alignment and justification</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(4, 1fr);
+          justify-content: space-between;
+          height: 100px;
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Nested containers!!</h2>
+      <div class="grid-container-outer">
+        <div class="box">part 1</div>
+        <div class="grid-container-inner">
+          <div class="box" style="background-color: cadetblue">2.1</div>
+          <div class="box" style="background-color: navajowhite">2.2</div>
+          <div class="box" style="background-color: cadetblue">2.3</div>
+          <div class="box" style="background-color: navajowhite">2.4</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Grid rows</h2>
+      <div class="grid-container" style="grid-template-columns: repeat(4, 1fr)">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+    </div>
+  </body>
+</html>

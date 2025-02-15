@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+}
+h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+.card {
+  background-color: rgb(105, 201, 105);
+  border-radius: 15px;
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  padding-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  border-radius: 5px;
+  background-color: bisque;
+  padding: 5px;
+  gap: 15px;
+}
+button {
+  background-color: rgb(72, 72, 196);
+  border-radius: 5px;
+  height: 30px;
+}
+button:hover {
+  background-color: rgb(34, 34, 75);
+}

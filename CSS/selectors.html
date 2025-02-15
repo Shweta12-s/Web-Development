@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SELECTORS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      p {
+        font-size: 16px;
+        margin: 10px 20px 10px 20px;
+        padding: 1px 2px 3px 4px;
+      }
+      .highlight {
+        background-color: #a36e6e;
+      }
+      #header {
+        color: #a36e6e;
+      }
+      input[type="text"] {
+        border-radius: 5px;
+        color: blueviolet;
+      }
+      article p {
+        font-style: italic;
+        padding: 10px;
+        color: #a36e6e;
+      }
+      ul > li {
+        background-color: brown;
+      }
+      div > p {
+        background-color: bisque;
+      }
+      h2 ~ p {
+        color: red;
+      }
+      a:hover {
+        background-color: blanchedalmond;
+        text-decoration: none;
+        text-shadow: #a36e6e;
+        padding: 5px;
+        margin: 4px;
+      }
+      p::first-letter {
+        text-shadow: #a36e6e;
+        font-weight: bold;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 30px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">This is a header.</header>
+    <h1>Main Headings</h1>
+    <p>Hii my name is Shweta Kumari. I am a girl.</p>
+    <p>This is just an another paragraph.</p>
+    <p class="highlight">This is an highlighted paragraph.</p>
+    <input type="text" name="" id="" placeholder="Type your name." />
+    <article>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+        adipisci sunt natus quod, quas ut atque iusto. Quae suscipit dignissimos
+        veritatis, officiis omnis, molestiae beatae eligendi porro corrupti
+        quidem ipsum ut mollitia placeat maiores?
+      </p>
+      <div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
+          perferendis quia, quaerat dolore non laborum.
+        </p>
+      </div>
+    </article>
+    <ul>
+      <li>
+        Fruits
+        <ul>
+          <li>Mango</li>
+          <li>Pineapple</li>
+          <li>Guava</li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <p>I am a child.</p>
+      <p>I am a child.</p>
+      <section>
+        <p>i am a descendant.</p>
+        <p>Paragraph in a div.</p>
+      </section>
+    </div>
+    <h2>Heading 2</h2>
+    <a href="#">Hover me to see the effect.</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora magni
+      cum natus nesciunt corporis repellendus atque sequi officiis error libero
+      quam non consectetur modi, voluptas quo aliquam porro quod facilis? Earum,
+      fugit. Facilis error repudiandae quisquam ut nobis incidunt modi ab,
+      tempore magni consectetur quidem.
+    </p>
+    <h3>Heading 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, porro.</p>
+  </body>
+</html>

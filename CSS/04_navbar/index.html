@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar project</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: aliceblue;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      .nav-1 {
+        border: 2px solid red;
+        background-color: #303d4b;
+        padding: 10px;
+      }
+      .nav-1 ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-1 li {
+        display: inline;
+      }
+      .nav-1 a {
+        text-decoration: none;
+        color: #f8f9fa;
+        /* background-color: rgb(188, 35, 35); */
+        padding: 5px 10px;
+        position: relative;
+      }
+      .nav-1 .login-btn {
+        background-color: orange;
+        color: #f8f9fa;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav-1 a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform: scaleX(0);
+        transition: transform ease-in-out;
+      }
+      .nav-1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav-2 {
+        border: 2px solid red;
+        background-color: #303d4b;
+        width: 300px;
+        padding: 20px;
+      }
+      .nav-2 a {
+        color: #f8f9fa;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        width: 100%;
+      }
+      .nav-2 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-2 li {
+        margin-bottom: 12px;
+      }
+      .nav-2 a:hover {
+        background-color: rgb(61, 32, 32);
+      }
+      .nav-2 .login-btn {
+        background-color: rgb(53, 84, 53);
+        border: none;
+        color: #f8f9fa;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        /* margin-left: 10px; */
+      }
+      .nav-2 .login-btn:hover {
+        background-color: rgb(42, 255, 42);
+        border: 1px solid white;
+      }
+      .nav-3 {
+        background-color: aquamarine;
+        padding: 10px;
+      }
+      .nav-3 ul {
+        padding: none;
+        margin: none;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav-3 a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        display: block;
+      }
+      .nav-3 .dropdown:hover .dropdown-content {
+        background-color: #fff;
+        display: block;
+        min-width: 150px;
+      }
+      .nav-3 .dropdown-content {
+        display: none;
+        position: absolute;
+      }
+      .nav-3 .login-btn:hover {
+        background-color: blue;
+      }
+      .nav-3 .login-btn {
+        padding: 5px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h1>Variation 1</h1>
+      <nav class="nav-1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-container">
+      <h1>Variation 2</h1>
+      <nav class="nav-2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+    <div class="nav-container">
+      <h1>Variation 3</h1>
+      <nav class="nav-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our story</a>
+              <a href="#">Team</a>
+              <a href="#">Contacts</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
